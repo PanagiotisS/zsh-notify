@@ -1,5 +1,5 @@
 # vim: set nowrap filetype=zsh:
-# 
+#
 # See README.md.
 #
 fpath=($fpath $(dirname $0:A))
@@ -13,7 +13,7 @@ zstyle ':notify:*' parent-pid $_ZSH_NOTIFY_ROOT_PPID
 # Notify an error with no regard to the time elapsed (but always only
 # when the terminal is in background).
 function notify-error {
-    local time_elapsed 
+    local time_elapsed
     time_elapsed=$1
     notify-if-background error "$time_elapsed" < /dev/stdin &!
 }
